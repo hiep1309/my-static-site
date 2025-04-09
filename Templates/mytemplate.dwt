@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<!-- TemplateBeginEditable name="doctitle" -->
+	<title>French Cafe'</title>
+	<!-- TemplateEndEditable -->
+	<link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/base.css" rel="stylesheet" type="text/css" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <!-- TemplateBeginEditable name="head" -->
+    <!-- TemplateEndEditable -->
+</head>
+<body>
+<div class="container">   
+	<header>
+        <div class="flt-left callUs">Call us +1 800 559 6580</div>
+        <div class="flt-right address">8901 Marmora Road, Glassgow,<br /> D04 89GR.</div>
+	</header>
+    <nav>
+        <ul>
+            <li class="flt-left"><a href="#">ABOUT US</a></li>
+            <li class="flt-left ourMenu"><a href="#">OUR MENU</a></li>
+            <li class="flt-right"><a href="#">CONTACT US</a></li>
+            <li class="flt-right galleryMenu"><a href="#">GALLERY</a></li>
+        </ul>
+        <img src="../images/FrenchCafelogo.png" />
+    </nav>
+	<section class="content">
+    	<!-- TemplateBeginEditable name="edit content" -->edit content here<!-- TemplateEndEditable -->    
+	</section>
+    <section class="moreInfo">
+        <div class="info flt-left">
+            <h2>TESTIMONIALS</h2>
+            <p><img src="../images/quot.png" />THIS PLEASANTLY RELAXED CAFE HAS JUST OPENED AND OFFERS AN INTERESTING SELECTION OF TRADITIONAL FRENCH DISHES"</p>
+            <p class="red-font">Jessica, 25 years</p>
+        </div>
+        <div class="info">
+            <h2>OUR NEWS</h2>
+            <p class="red-font">15-Jan-2010 New Menu!</p>
+            <p>Adipiscing eliasraent veuole dasertyase ketyua ummy hendrerit mauris lacusenean jaseras maseua elportasce suscvarius cinaya natoqibe jretyas uertyas kertya faerta srtaseryas.<br />Sed ut perspiciatis uncle omnis iste natus error sit voluptatem accuantium.</p>
+            <h3><a href=#>READ MORE</a></h3>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#">Appertizers</a></li>
+                <li><a href="#">Hot tapas</a></li>
+                <li><a href="#">Soups and Salads</a></li>
+                <li><a href="#">Accompaniments</a></li>
+                <li><a href="#">Vegetarian Dish</a></li>
+                <li><a href="#">Chicken Dish</a></li>
+                <li><a href="#">Seafood Dish</a></li>
+                <li><a href="#">Vegetarian Sauce</a></li>
+                <li><a href="#">Seafood Sauce</a></li>
+                <li><a href="#">Desserts</a></li>
+            </ul>
+        </div>
+    </section>
+	<footer>
+        <div class="flt-left">The French Cafe &copy;2011 | Pricacy Policy<br />
+            layout by: thangvdps01834
+        </div>
+        <div class="flt-right">
+            <div class="social-network"><a href="#"><img src="../images/iconTwitter.png" /></a></div>
+            <div class="social-network"><a href="#"><img src="../images/iconRSS.png" /></a></div>
+            <div class="social-network"><a href="#"><img src="../images/iconFB.png" /></a></div>
+        </div>
+	</footer>
+</div> 
+</body>
+</html>

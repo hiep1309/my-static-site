@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>French Cafe'</title>
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        // Khai bao bien
+        var index = 0;
+        var time;
+        var img = [];
+        
+        // Load hinh vao bo nho dem
+        var qty = 9
+        for(i=0;i<qty;i++){
+            img[i] = "images/disk" + i + ".png";
+        }
+        
+        function loadAnh(){
+            // set thoi gian chay
+            time = setInterval(next,2000);
+        }
+        
+        // ham next
+        function next(){
+            index++;
+            // Kiểm tra điều kiện
+            if(index > img.length - 3 ){
+                index = 0;
+            }
+            document.getElementById("first").src = img[index];
+            document.getElementById("second").src = img[index+1];
+            document.getElementById("third").src = img[index+2];
+            clearInterval(time);
+            time = setInterval(next,2000);
+        }
+        
+        // ham prev
+        function prev(){
+            index--;
+            // Kiem tra dieu kien
+            if(index == -1){index = img.length -3}
+            document.getElementById("first").src = img[index];
+            document.getElementById("second").src = img[index+1];
+            document.getElementById("third").src = img[index+2];
+            clearInterval(time);
+            time = setInterval(next,2000);
+        }
+        
+    </script>
+</head>
+<body onload="loadAnh();">
+<div class="container">   
+	<header>
+        <div class="flt-left callUs">Call us +1 800 559 6580</div>
+        <div class="flt-right address">8901 Marmora Road, Glassgow,<br /> D04 89GR.</div>
+	</header> <!-- /header -->
+    <nav>
+        <ul>
+            <li class="flt-left"><a href="about.html">ABOUT US</a></li>
+            <li class="flt-left ourMenu"><a href="ourmenu.html">OUR MENU</a></li>
+            <li class="flt-right"><a href="contact.html">CONTACT US</a></li>
+            <li class="flt-right galleryMenu"><a href="gallery.html">GALLERY</a></li>
+        </ul>
+        <a href="index.html"><img src="images/FrenchCafelogo.png" /></a>
+    </nav> <!-- /nav -->
+	<section class="content">
+        <section class="dishes flt-left">
+            <img src="images/btnPrev.png" onclick="prev();">
+            <ul>
+                <li><a href="#"><img src="images/disk0.png"  id="first" /></a></li>
+                <li><a href="#"><img src="images/disk1.png"  id="second" /></a></li>
+                <li><a href="#"><img src="images/disk2.png"  id="third" /></a></li>
+            </ul>
+            <img src="images/btnNext.png" onclick="next();">
+        </section>
+        <section class="welcome clearfix">
+            <div class="flt-left"><img src="images/welcome.png" /></div>
+            <p class="flt-right">CAFE' HAS SET THE STANDARD FOR FINE DINING FOR MORE THAN 40 YEARS. ROMANTIC, EXTRAVAGANT, EXEMPLARY SERVICE... ALL THESE ARE USED TO DESCRIBE THE FRENCH CAGE' DINING EXPERIENCE</p>
+        </section> <!-- /content -->
+	</section>
+    <section class="moreInfo">
+        <div class="info flt-left">
+            <h2>TESTIMONIALS</h2>
+            <p><img src="images/quot.png" />THIS PLEASANTLY RELAXED CAFE HAS JUST OPENED AND OFFERS AN INTERESTING SELECTION OF TRADITIONAL FRENCH DISHES"</p>
+            <p class="red-font">Jessica, 25 years</p>
+        </div>
+        <div class="info">
+            <h2>OUR NEWS</h2>
+            <p class="red-font">15-Jan-2010 New Menu!</p>
+            <p>Adipiscing eliasraent veuole dasertyase ketyua ummy hendrerit mauris lacusenean jaseras maseua elportasce suscvarius cinaya natoqibe jretyas uertyas kertya faerta srtaseryas.<br />Sed ut perspiciatis uncle omnis iste natus error sit voluptatem accuantium.</p>
+            <h3><a href=#>READ MORE</a></h3>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#">Appertizers</a></li>
+                <li><a href="#">Hot tapas</a></li>
+                <li><a href="#">Soups and Salads</a></li>
+                <li><a href="#">Accompaniments</a></li>
+                <li><a href="#">Vegetarian Dish</a></li>
+                <li><a href="#">Chicken Dish</a></li>
+                <li><a href="#">Seafood Dish</a></li>
+                <li><a href="#">Vegetarian Sauce</a></li>
+                <li><a href="#">Seafood Sauce</a></li>
+                <li><a href="#">Desserts</a></li>
+            </ul>
+        </div>
+    </section> <!-- /moreInfo -->
+	<footer>
+        <div class="flt-left">The French Cafe &copy;2011 | Pricacy Policy<br />
+            layout by: DIENNT
+        </div>
+        <div class="flt-right">
+            <div class="social-network"><a href="https://twitter.com/" target="_blank"><img src="images/iconTwitter.png" /></a></div>
+            <div class="social-network"><a href="https://www.rss.com/" target="_blank"><img src="images/iconRSS.png" /></a></div>
+            <div class="social-network"><a href="https://www.facebook.com" target="_blank"><img src="images/iconFB.png" /></a></div>
+        </div>
+	</footer> <!-- /footer -->
+</div> 
+</body>
+</html>

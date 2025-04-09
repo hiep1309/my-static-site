@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/mytemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+	<meta charset="utf-8" />
+	<!-- InstanceBeginEditable name="doctitle" -->
+	<title>GALLERY</title>
+	<!-- InstanceEndEditable -->
+	<link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <!-- Add jQuery library -->
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+
+
+    <!-- Add fancyBox main JS and CSS files -->
+    <script type="text/javascript" src="js/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+    <!-- Add Button helper (this is optional) -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script type="text/javascript" src="js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            /*
+             *  Simple image gallery. Uses default settings
+             */
+
+            $('.fancybox').fancybox();
+
+            /*
+             *  Different effects
+             */
+
+            // Change title type, overlay closing speed
+            $(".fancybox-effects-a").fancybox({
+                helpers: {
+                    title : {
+                        type : 'outside'
+                    },
+                    overlay : {
+                        speedOut : 0
+                    }
+                }
+            });
+
+            // Disable opening and closing animations, change title type
+            $(".fancybox-effects-b").fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'over'
+                    }
+                }
+            });
+
+            // Set custom style, close if clicked, change title type and overlay color
+            $(".fancybox-effects-c").fancybox({
+                wrapCSS    : 'fancybox-custom',
+                closeClick : true,
+
+                openEffect : 'none',
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    overlay : {
+                        css : {
+                            'background' : 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+
+            // Remove padding, set opening and closing animations, close if clicked and disable overlay
+            $(".fancybox-effects-d").fancybox({
+                padding: 0,
+
+                openEffect : 'elastic',
+                openSpeed  : 150,
+
+                closeEffect : 'elastic',
+                closeSpeed  : 150,
+
+                closeClick : true,
+
+                helpers : {
+                    overlay : null
+                }
+            });
+
+            /*
+             *  Button helper. Disable animations, hide close button, change title type and content
+             */
+
+            $('.fancybox-buttons').fancybox({
+                openEffect  : 'none',
+                closeEffect : 'none',
+
+                prevEffect : 'none',
+                nextEffect : 'none',
+
+                closeBtn  : false,
+
+                helpers : {
+                    title : {
+                        type : 'inside'
+                    },
+                    buttons : {}
+                },
+
+                afterLoad : function() {
+                    this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+                }
+            });
+
+            /*
+             *  Open manually
+             */
+
+            $("#fancybox-manual-a").click(function() {
+                $.fancybox.open('1_b.jpg');
+            });
+
+            $("#fancybox-manual-b").click(function() {
+                $.fancybox.open({
+                    href : 'iframe.html',
+                    type : 'iframe',
+                    padding : 5
+                });
+            });
+
+            $("#fancybox-manual-c").click(function() {
+                $.fancybox.open([
+                    {
+                        href : '1_b.jpg',
+                        title : 'My title'
+                    }, {
+                        href : '2_b.jpg',
+                        title : '2nd title'
+                    }, {
+                        href : '3_b.jpg'
+                    }
+                ], {
+                    helpers : {
+                        thumbs : {
+                            width: 75,
+                            height: 50
+                        }
+                    }
+                });
+            });
+
+
+        });
+    </script>
+    <style type="text/css">
+        .fancybox-custom .fancybox-skin {
+            box-shadow: 0 0 50px #222;
+        }
+    </style>
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+<body>
+<div class="container">   
+	<header>
+        <div class="flt-left callUs">Call us +1 800 559 6580</div>
+        <div class="flt-right address">8901 Marmora Road, Glassgow,<br /> D04 89GR.</div>
+	</header>
+    <nav>
+        <ul>
+            <li class="flt-left"><a href="about.html">ABOUT US</a></li>
+            <li class="flt-left ourMenu"><a href="ourmenu.html">OUR MENU</a></li>
+            <li class="flt-right"><a href="contact.html">CONTACT US</a></li>
+            <li class="flt-right galleryMenu"><a href="gallery.html">GALLERY</a></li>
+        </ul>
+        <a href="index.html"><img src="images/FrenchCafelogo.png" /></a>
+    </nav>
+	<section class="content">
+    	<!-- InstanceBeginEditable name="edit content" -->
+
+        <div class="content-wrapper clearfix gallery">
+            <div><img src="images/decor.png " width="100%" /></div>
+            <h2 style="text-align:center; margin-top:15px; margin-bottom:50px; font-weight: bold;">OUR GALLERY</h2>
+            <h3>APPERTIZERS</h3>
+            <p class="appetizers">
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/appetizer_1_big.jpg"><img src="images/appetizer_1_sm.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/appetizer_2_big.jpg"><img src="images/appetizer_2_sm.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/appetizer_3_big.jpg"><img src="images/appetizer_3_sm.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/appetizer_4_big.jpg"><img src="images/appetizer_4_sm.jpg" alt="" /></a>
+            </p>
+            <h3>MAIN-COURSES AND SOUPS</h3>
+            <p class="maincourses">
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/soup_and_maincourse_big_1.jpg"><img src="images/soup_and_maincourse_sm_1.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/soup_and_maincourse_big_2.jpg"><img src="images/soup_and_maincourse_sm_2.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/soup_and_maincourse_big_3.jpg"><img src="images/soup_and_maincourse_sm_3.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/soup_and_maincourse_big_4.jpg"><img src="images/soup_and_maincourse_sm_4.jpg" alt="" /></a>
+            </p>
+            <h3>DESSERTS</h3>
+            <p class="maincourses">
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/dessert_1_big.jpg"><img src="images/dessert_1_sm.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/dessert_2_big.jpg"><img src="images/dessert_2_sm.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/dessert_3_big.jpg"><img src="images/dessert_3_sm.jpg" alt="" /></a>
+
+                <a class="fancybox-buttons" data-fancybox-group="button" href="images/dessert_4_big.jpg"><img src="images/dessert_4_sm.jpg" alt="" /></a>
+            </p>
+        </div>
+
+        <!-- InstanceEndEditable -->    
+	</section>
+    <section class="moreInfo">
+        <div class="info flt-left">
+            <h2>TESTIMONIALS</h2>
+            <p><img src="images/quot.png" />THIS PLEASANTLY RELAXED CAFE HAS JUST OPENED AND OFFERS AN INTERESTING SELECTION OF TRADITIONAL FRENCH DISHES"</p>
+            <p class="red-font">Jessica, 25 years</p>
+        </div>
+        <div class="info">
+            <h2>OUR NEWS</h2>
+            <p class="red-font">15-Jan-2010 New Menu!</p>
+            <p>Adipiscing eliasraent veuole dasertyase ketyua ummy hendrerit mauris lacusenean jaseras maseua elportasce suscvarius cinaya natoqibe jretyas uertyas kertya faerta srtaseryas.<br />Sed ut perspiciatis uncle omnis iste natus error sit voluptatem accuantium.</p>
+            <h3><a href=#>READ MORE</a></h3>
+        </div>
+        <div class="info">
+            <ul>
+                <li><a href="#">Appertizers</a></li>
+                <li><a href="#">Hot tapas</a></li>
+                <li><a href="#">Soups and Salads</a></li>
+                <li><a href="#">Accompaniments</a></li>
+                <li><a href="#">Vegetarian Dish</a></li>
+                <li><a href="#">Chicken Dish</a></li>
+                <li><a href="#">Seafood Dish</a></li>
+                <li><a href="#">Vegetarian Sauce</a></li>
+                <li><a href="#">Seafood Sauce</a></li>
+                <li><a href="#">Desserts</a></li>
+            </ul>
+        </div>
+    </section>
+	<footer>
+        <div class="flt-left">The French Cafe &copy;2011 | Pricacy Policy<br />
+            layout by: thangvdps01834
+        </div>
+        <div class="flt-right">
+            <div class="social-network"><a href="https://twitter.com/" target="_blank"><img src="images/iconTwitter.png" /></a></div>
+            <div class="social-network"><a href="https://www.rss.com/" target="_blank"><img src="images/iconRSS.png" /></a></div>
+            <div class="social-network"><a href="https://www.facebook.com" target="_blank"><img src="images/iconFB.png" /></a></div>
+        </div>
+	</footer>
+</div> 
+</body>
+<!-- InstanceEnd --></html>
